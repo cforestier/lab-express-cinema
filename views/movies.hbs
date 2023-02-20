@@ -1,15 +1,13 @@
-{{!-- views/books/books-list.hbs --}}
+<h2>Ironhack Cinema</h2>
+<p>Click on the movies to check the showtimes!</p>
 
-<h1>MOVIES</h1>
 
-{{!-- since we passed allTheBooksFromDB as `books`,
-we can iterate over it here with #each--}}
-  <div>
-
-{{#each movies}}
-    <h3>{{title}}</h3>
-    <img src="{{image}}" alt="{{title}}">
-
-    <a href="/movies/{{_id}}">See more</a>
-{{/each}}
-  </div>
+<div id="movies-selection">
+  {{#each movies}}
+    <div>
+      <img src="{{image}}">
+      <h3>{{title}}</h3>
+      <a href="/movies/{{id}}">See more</a>
+    </div>
+  {{/each}}
+</div>
